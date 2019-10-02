@@ -1,0 +1,133 @@
+<html>
+
+<head>
+  <title>mellyne mows</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+</head>
+
+
+<body>
+  <div class="bg"><br><br>
+
+    <div class="container">
+      <br>
+      <div class="card text-center">
+        <div class="card-body">
+          <h1 class="card-text">MQTT</h1>
+        </div>
+      </div>
+      <br>
+      <!--This is the code in the Broker Division-->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="card-texts" style="background-color:rgb(42, 126, 165);color: silver;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Broker</h1>
+            <h2 class="card-subtitle mb-2 text-muted">Address:</h2>
+            <input type="text" class="form-control input-lg " id="inputedInBroker" style="padding-left:30px;height: 30px;margin-left: 10px;">
+            <br><br>
+            <button class="button" id="con_btn">Connect</button>
+            <button class="button" id="disCon_btn">Disconnect</button>
+            <h2>Status:</h2>
+            <input type="text" size="30" id="statusIn" style="padding-left:30px;height: 30px;margin-left: 10px;"><br>
+            <br>
+
+
+
+
+            <!--      -->
+
+          </div>
+          <div class="col-sm-4">
+            <h1 style="background-color:rgb(42, 126, 165);color: silver;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Publish</h1>
+            <h2 class="card-subtitle mb-2 text-muted">Topic:</h2>
+
+            <input type="text" size="30" id="topicIn" style="padding-left:30px;height: 30px;margin-left: 10px;">
+            <br>
+            <h2>Payload:</h2>
+
+            <input type="text" size="30" id="payloadIn" style="padding-left:30px;height: 30px;margin-left: 10px;">
+            <br><br>
+            <button class="button" id="pub_btn">Publish</button><br><br><br>
+
+          </div>
+          <div class="col-sm-4">
+            <h1 style="background-color:rgb(42, 126, 165);color: silver;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ">Subscribe</h1>
+            <h2 class="card-subtitle mb-2 text-muted">Topic:</h2>
+            <input type="text" id="subInputTop" size="30" style="padding-left:30px;height: 30px;margin-left: 10px;">
+            <br><br>
+            <button class="button" id="sub_btn">Subscribe</button>
+
+            <button class="button" id="unsub_btn">Unsubscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Message</h3>
+          <table class="table table-hover" id="tableBroke">
+            <tr class="info">
+              <th>Topic</th>
+              <th>Payload</th>
+              <th>Time Stamp</th>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <h3>Message</h3>
+          <table  id="tablePub">
+            <thead>
+              <tr>
+                <th>TOPIC</th>
+                <th>PAYLOAD</th>
+                <th>TIME STAMP</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <h3>Message</h3>
+          <table id="tableSub">
+            <thead>
+              <tr>
+                <th>TOPIC</th>
+                <th>TIME STAMP</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--This is the code in the Publish Division-->
+  <div class="container">
+    <div class="div1" style="background-color:white">
+      <div>
+
+
+      </div>
+    </div>
+  </div>
+  <!--This is the code in the Subscribe Division-->
+  <div class="container">
+    <div class="div1" style="background-color:white">
+      <div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="scripts/browserMqtt.js"></script>
+<script src="scripts/controller.js"></script>
+
+</html>
