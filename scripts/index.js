@@ -3,8 +3,9 @@ var btnPub = document.getElementById("pub_btn");
 var btnSub = document.getElementById("sub_btn");
 var btnUnsub = document.getElementById("unsub_btn");
 var btndisCon = document.getElementById("disCon_btn");
-var inputBrokee = document.getElementById("inputedInBroker").value;
-var client = mqtt.connect(inputBrokee);
+
+
+var client = mqtt.connect("wss://test.mosquitto.org:8081/mqtt");
 
 var topicInput = ($('#subInputTop').val());
 var payloadInput = document.getElementById("payloadIn");
@@ -91,132 +92,4 @@ btnUnsub.addEventListener("click", function () {
 
 
 
-  // if ($(topicInput).length == 0) {
-  //   alert("Please enter a topic");
-  // } else {
-  //   client.publish($(topicInput).val(), $(payloadInput).val(), function () {
-  //   })
-  // }
-
-// });
-
-
-
-// client.publish("mqtt/" + topic.value, payload.value)
-// client.on("message", function (topic, payload) {
-//   console.log([topic, payload].join(": "));
-//   var dateTime = new Date();
-
-
-//publish cliennt sa topic nga demo where ang payload kay hello world
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// basic functionalities
-// client = mqtt.connect("ws://broker.hivemq.com:8000/mqtt")
-// client.on("connect", function () {
-//   console.log("Successfully connected");
-// })
-
-// //Publish Button
-
-
-// btnPub.addEventListener('click', function (ex) {
-//   ex.preventDefault();
-
-//   client.publish("mqtt/" + topic.value, payload.value)
-//   client.on("message", function (topic, payload) {
-//     console.log([topic, payload].join(": "));
-//     var dateTime = new Date();
-
-
-    //publish cliennt sa topic nga demo where ang payload kay hello world
-
-
-//   })
-
-// })
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // advance functionalities
-// client = mqtt.connect("ws://broker.hivemq.com:8000/mqtt")
-// client.subscribe("mqtt/demo", function (err){
-//   if (err){
-//     console.log(err);
-//   } else {
-//     console.log("subscribed")
-//   }
-// })
-
-// client.on("connect", function(){
-//     console.log("Successfully connected");
-// })
-
-// client.on("message", function (topic, payload) {
-//   console.log([topic, payload].join(": "));
-//   client.end();
-// })
-
-// client.publish("mqtt/demo", "hello world!", function(err){
-//   if (err){
-//     console.log(err)
-//   } else {
-//     console.log("published")
-//   }
-// })
+  

@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/junreycloudstrife/mows.git"
   },
-  "engines": {
-    "node": "10.x"
-  },
   "keywords": [
     "mows",
     "mqtt",
@@ -23,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/junreycloudstrife/mows/issues"
   },
-  "homepage": "https://github.com/junreycloudstrife/mows#readme",
-  "dependencies": {
-    "package.json": "^2.0.1",
-    "save": "^2.4.0"
-  }
+  "homepage": "https://github.com/junreycloudstrife/mows#readme"
 }
