@@ -24,7 +24,7 @@
   "homepage": "https://github.com/Keywrayqouh/mqtt-node-express#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mqtt": "^3.0.0"
+    "mqtt": "^4.3.7"
   },
   "engines": {
     "node": "10.16"
